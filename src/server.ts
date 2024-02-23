@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import mongoose from "mongoose";
+import app from "./app";
 
 // CLUSTER => DATABASE => COLLECTION => DOCUMENT
 mongoose
@@ -8,5 +9,8 @@ mongoose
   .then((data) => {
     console.log("mongoDb connection succed");
     const PORT = process.env.PORT ?? 3003;
+    app.listen(PORT, function () {
+      console.log(`the server is running successfully on ${PORT}`);
+    });
   })
   .catch((err) => console.log("Error on connection Mongodb", err));
