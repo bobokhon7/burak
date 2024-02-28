@@ -1,21 +1,34 @@
+/* Project Standards
+ - Logging Standards
+ - Naming Standards
+     function,method,variable => Camel Case
+     clas => Poscal
+     folder => KEBAB
+     Css => SNAKE
+
+ - Error handling
+
+
+*/
+
 // H-TASK:
 
 // shunday function tuzing, u integerlardan iborat arrayni argument
 // sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin
 // MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 
-const getPositive = (arr: any) => {
-  let newArr = [];
+// const getPositive = (arr: any) => {
+//   let newArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      newArr.push(arr[i]);
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       newArr.push(arr[i]);
+//     }
+//   }
 
-  return newArr.join("");
-};
-console.log(getPositive([1, -4, 2]));
+//   return newArr.join("");
+// };
+// console.log(getPositive([1, -4, 2]));
 
 // /*H-TASK:
 
