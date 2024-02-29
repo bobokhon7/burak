@@ -11,6 +11,12 @@
 
 */
 
+/*
+Traditional api
+Rest Api
+GraphQL Api
+*/
+
 // H-TASK:
 
 // shunday function tuzing, u integerlardan iborat arrayni argument
