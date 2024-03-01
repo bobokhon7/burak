@@ -24,15 +24,6 @@ restaurantController.getLogin = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.processLogin = (req: Request, res: Response) => {
-  try {
-    console.log("processLogin");
-    res.send("done");
-  } catch (err) {
-    console.log("Error, on Login Page", err);
-  }
-};
-
 restaurantController.getSignup = (req: Request, res: Response) => {
   try {
     console.log("go SignUp");
@@ -42,9 +33,18 @@ restaurantController.getSignup = (req: Request, res: Response) => {
   }
 };
 
+restaurantController.processLogin = (req: Request, res: Response) => {
+  try {
+    console.log("processLogin");
+    res.send("done");
+  } catch (err) {
+    console.log("Error, on Login Page", err);
+  }
+};
+
 restaurantController.processSignup = async (req: Request, res: Response) => {
   try {
-    console.log("go processSignup");
+    console.log("processSignup");
     console.log("body:", req.body);
 
     const newMember: MemberInput = req.body;
