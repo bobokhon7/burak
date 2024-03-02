@@ -6,7 +6,7 @@ router.get("/", restaurantController.goHome);
 
 router
   .get("/login", restaurantController.getLogin)
-  .post("/login/process", restaurantController.processLogin);
+  .post("/login", restaurantController.processLogin);
 
 router
   .get("/signup", restaurantController.getSignup)
