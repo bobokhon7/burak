@@ -17,26 +17,32 @@ Rest Api
 GraphQL Api
 */
 
+/*
+Traditional Front-End => BSSR => Backend Server Side Rendering (Admin) => EJS
+
+Modern Front-End =>SPA => Single Page Application => React (User)
+*/
+
 // I-TASK:
 
 // Shunday function tuzing, unga string argument pass bolsin.
 // Function ushbu agrumentdagi digitlarni yangi stringda return qilsin
 // MASALAN: getDigits("m14i1t") return qiladi "141"
 
-const getDigits = (str: any) => {
-  let newArr = [];
-  let arrConvert = str.split("").map(Number);
+// const getDigits = (str: any) => {
+//   let newArr = [];
+//   let arrConvert = str.split("").map(Number);
 
-  for (let i = 0; i < arrConvert.length; i++) {
-    if (!Number.isNaN(arrConvert[i])) {
-      newArr.push(arrConvert[i]);
-    }
-  }
+//   for (let i = 0; i < arrConvert.length; i++) {
+//     if (!Number.isNaN(arrConvert[i])) {
+//       newArr.push(arrConvert[i]);
+//     }
+//   }
 
-  return newArr.join("");
-};
+//   return newArr.join("");
+// };
 
-console.log(getDigits("m14i1t"));
+// console.log(getDigits("m14i1t"));
 
 // H-TASK:
 
