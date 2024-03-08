@@ -23,6 +23,20 @@ Traditional Front-End => BSSR => Backend Server Side Rendering (Admin) => EJS
 Modern Front-End =>SPA => Single Page Application => React (User)
 */
 
+// J-TASK:
+
+// Shunday function yozing, u string qabul qilsin
+// va string ichidagi eng uzun sozni qaytarsin.
+// MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan"
+
+function findLongestWord(str: any) {
+  const arr = str.split(" ");
+
+  return arr.sort((a: any, b: any) => b.length - a.length)[0];
+}
+const result = findLongestWord("I come from Uzbekistan");
+console.log("result:", result);
+
 // I-TASK:
 
 // Shunday function tuzing, unga string argument pass bolsin.
