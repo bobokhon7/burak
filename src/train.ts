@@ -23,19 +23,38 @@ Traditional Front-End => BSSR => Backend Server Side Rendering (Admin) => EJS
 Modern Front-End =>SPA => Single Page Application => React (User)
 */
 
+// K-TASK:
+
+// Shunday function yozing, u string qabul
+// qilsin va string ichidagi unli harflar sonini qaytarsin.
+// MASALAN: countVowels("string") return 1;
+
+const countVowels = (str: any) => {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let letter of str.toLowerCase()) {
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countVowels("string"));
+
 // J-TASK:
 
 // Shunday function yozing, u string qabul qilsin
 // va string ichidagi eng uzun sozni qaytarsin.
 // MASALAN: findLongestWord("I come from Uzbekistan") return "Uzbekistan"
 
-function findLongestWord(str: any) {
-  const arr = str.split(" ");
+// function findLongestWord(str: any) {
+//   const arr = str.split(" ");
 
-  return arr.sort((a: any, b: any) => b.length - a.length)[0];
-}
-const result = findLongestWord("I come from Uzbekistan");
-console.log("result:", result);
+//   return arr.sort((a: any, b: any) => b.length - a.length)[0];
+// }
+// const result = findLongestWord("I come from Uzbekistan");
+// console.log("result:", result);
 
 // I-TASK:
 
