@@ -29,18 +29,18 @@ Modern Front-End =>SPA => Single Page Application => React (User)
 // qilsin va string ichidagi unli harflar sonini qaytarsin.
 // MASALAN: countVowels("string") return 1;
 
-const countVowels = (str: any) => {
-  const vowels = ["a", "e", "i", "o", "u"];
-  let count = 0;
-  for (let letter of str.toLowerCase()) {
-    if (vowels.includes(letter)) {
-      count++;
-    }
-  }
-  return count;
-};
+// const countVowels = (str: any) => {
+//   const vowels = ["a", "e", "i", "o", "u"];
+//   let count = 0;
+//   for (let letter of str.toLowerCase()) {
+//     if (vowels.includes(letter)) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
 
-console.log(countVowels("string"));
+// console.log(countVowels("string"));
 
 // J-TASK:
 
