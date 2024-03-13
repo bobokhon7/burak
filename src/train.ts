@@ -23,6 +23,19 @@ Traditional Front-End => BSSR => Backend Server Side Rendering (Admin) => EJS
 Modern Front-End =>SPA => Single Page Application => React (User)
 */
 
+// L-TASK
+function reverseSentence(str: string) {
+  const arr = str.split(" ");
+  let reversedArr = [];
+
+  for (const word of arr) {
+    reversedArr.push(word.split("").reverse().join(""));
+  }
+
+  return reversedArr.join(" ");
+}
+
+console.log(reverseSentence("we like Coding!"));
 // K-TASK:
 
 // Shunday function yozing, u string qabul

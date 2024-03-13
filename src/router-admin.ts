@@ -2,6 +2,7 @@ import express, { Request, Response } from "express";
 const router = express.Router();
 import restaurantController from "./controllers/restaurant.controller";
 import productController from "./controllers/product.controller";
+import makeUploader from "./libs/utils/uploader";
 
 router.get("/", restaurantController.goHome);
 
@@ -11,7 +12,11 @@ router
 
 router
   .get("/signup", restaurantController.getSignup)
-  .post("/signup", restaurantController.processSignup);
+  .post(
+    "/signup",
+    makeUploader("members").single("productImage"),
+    restaurantController.processSignup
+  );
 
 router.get("/logout", restaurantController.logout);
 
@@ -23,8 +28,18 @@ router.get(
   restaurantController.verifyRestaurant,
   productController.getAllProducts
 );
-router.post("/product/create", productController.createNewProduct);
-router.post("/product/:id", productController.updateChosenProduct);
+router.post(
+  "/product/create",
+  restaurantController.verifyRestaurant,
+  // uploadProductImage.single("productImage"),
+  makeUploader("products").single("productImage"),
+  productController.createNewProduct
+);
+router.post(
+  "/product/:id",
+  restaurantController.verifyRestaurant,
+  productController.updateChosenProduct
+);
 
 /**  User */
 
