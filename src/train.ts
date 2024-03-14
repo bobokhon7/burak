@@ -23,6 +23,13 @@ Traditional Front-End => BSSR => Backend Server Side Rendering (Admin) => EJS
 Modern Front-End =>SPA => Single Page Application => React (User)
 */
 
+////////////////////////// Validation ////////////////////
+/*
+Frontend Validation
+Backend Validation
+DataBase Validation
+*/
+
 // L-TASK
 function reverseSentence(str: string) {
   const arr = str.split(" ");
