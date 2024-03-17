@@ -24,6 +24,10 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
+    productPrice: {
+      type: Number,
+      required: true,
+    },
     productLeftCount: {
       type: Number,
       required: true,
@@ -35,7 +39,7 @@ const productSchema = new Schema(
     },
 
     productVolume: {
-      type: String,
+      type: Number,
       enum: ProductValume,
       default: ProductValume.ONE,
     },

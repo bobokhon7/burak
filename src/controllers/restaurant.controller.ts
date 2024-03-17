@@ -51,7 +51,7 @@ restaurantController.processSignup = async (
 
     const newMember: MemberInput = req.body;
     newMember.memberType = MemberType.RESTAURANT;
-    newMember.memberImage = file?.path;
+    newMember.memberImage = file?.path.replace(/\\/g, "/");
     const result = await memberService.processSignup(newMember);
     ///// TODO: SESSION AUTHENTICATION
 
