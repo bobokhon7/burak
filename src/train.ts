@@ -30,19 +30,38 @@ Backend Validation
 DataBase Validation
 */
 
-// L-TASK
-function reverseSentence(str: string) {
-  const arr = str.split(" ");
-  let reversedArr = [];
+// N-TASK:
 
-  for (const word of arr) {
-    reversedArr.push(word.split("").reverse().join(""));
+// Shunday function yozing, u string qabul qilsin va string
+// palindrom yani togri oqilganda ham, orqasidan oqilganda ham
+// bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
+// MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
+
+const palindromCheck = (str: any) => {
+  const changeStringToArr = str.split("").reverse().join("");
+
+  if (str == changeStringToArr) {
+    return true;
+  } else {
+    return false;
   }
+};
 
-  return reversedArr.join(" ");
-}
+console.log(palindromCheck("bob"));
 
-console.log(reverseSentence("we like Coding!"));
+// L-TASK
+// function reverseSentence(str: string) {
+//   const arr = str.split(" ");
+//   let reversedArr = [];
+
+//   for (const word of arr) {
+//     reversedArr.push(word.split("").reverse().join(""));
+//   }
+
+//   return reversedArr.join(" ");
+// }
+
+// console.log(reverseSentence("we like Coding!"));
 // K-TASK:
 
 // Shunday function yozing, u string qabul
