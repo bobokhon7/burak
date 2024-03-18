@@ -43,4 +43,10 @@ router.post(
 
 /**  User */
 
+router.get(
+  "/user/all",
+  restaurantController.verifyRestaurant,
+  restaurantController.getUsers
+);
+
 export default router;
