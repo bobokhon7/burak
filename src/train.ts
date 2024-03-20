@@ -30,6 +30,21 @@ Backend Validation
 DataBase Validation
 */
 
+// O-TASK:
+
+// Shunday function yozing, u har xil valuelardan iborat
+// array qabul qilsin va array ichidagi sonlar yigindisini
+// hisoblab chiqqan javobni qaytarsin.
+// MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+
+const calculateSumOfNumbers = (arr: any) => {
+  let newArr = arr.filter((num: any) => {
+    return typeof num === "number";
+  });
+
+  return newArr.reduce((a: any, b: any) => a + b);
+};
+console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
 // N-TASK:
 
 // Shunday function yozing, u string qabul qilsin va string
@@ -37,17 +52,17 @@ DataBase Validation
 // bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
 // MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
 
-const palindromCheck = (str: any) => {
-  const changeStringToArr = str.split("").reverse().join("");
+// const palindromCheck = (str: any) => {
+//   const changeStringToArr = str.split("").reverse().join("");
 
-  if (str == changeStringToArr) {
-    return true;
-  } else {
-    return false;
-  }
-};
+//   if (str == changeStringToArr) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
-console.log(palindromCheck("bob"));
+// console.log(palindromCheck("bob"));
 
 // L-TASK
 // function reverseSentence(str: string) {
