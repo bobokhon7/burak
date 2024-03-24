@@ -30,6 +30,18 @@ Backend Validation
 DataBase Validation
 */
 
+// P-TASK:
+
+// Shunday function yozing, u object qabul qilsin va
+//  arrayni object arrayga otkazib arrayni qaytarsin qaytarsin.
+// MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+
+const objectToArray = (obj: any) => {
+  return Object.entries(obj);
+};
+
+console.log(objectToArray({ a: 10, b: 20 }));
+
 // O-TASK:
 
 // Shunday function yozing, u har xil valuelardan iborat
@@ -37,15 +49,15 @@ DataBase Validation
 // hisoblab chiqqan javobni qaytarsin.
 // MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
 
-const calculateSumOfNumbers = (arr: any) => {
-  let newArr = arr.filter((num: any) => {
-    return typeof num === "number";
-  });
+// const calculateSumOfNumbers = (arr: any) => {
+//   let newArr = arr.filter((num: any) => {
+//     return typeof num === "number";
+//   });
 
-  return newArr.reduce((a: any, b: any) => a + b);
-};
-console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
-// N-TASK:
+//   return newArr.reduce((a: any, b: any) => a + b);
+// };
+// console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+// // N-TASK:
 
 // Shunday function yozing, u string qabul qilsin va string
 // palindrom yani togri oqilganda ham, orqasidan oqilganda ham
