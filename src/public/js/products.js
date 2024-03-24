@@ -21,6 +21,28 @@ $(function () {
     $(".dish-container").slideToggle(500);
     $("#process-btn").css("display", "flex");
   });
+
+  $(".new-product-status").on("change", async function (e) {
+    const id = e.target.id;
+    const productStatus = $(`#${id}.new-product-status`).val();
+    console.log("id:", id);
+
+    console.log("productStatus", productStatus);
+
+    try {
+      const response = await axios.post(`/admin/product/${id}`, {
+        productStatus: productStatus,
+      });
+      const result = response.data;
+      if (result.data) {
+        console.log("Product Updated");
+        $(".new-product-status").blur();
+      } else alert("Product updated Failed!!");
+    } catch (err) {
+      console.log(err);
+      alert("Product updated Failed!!");
+    }
+  });
 });
 
 function validateForm() {
