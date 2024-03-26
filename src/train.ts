@@ -30,6 +30,28 @@ Backend Validation
 DataBase Validation
 */
 
+// R-TASK:
+
+// Shunday function yozing, u string parametrga ega bolsin.
+// String "1+2" holatda pass qilinganda string ichidagi sonlar
+// yigindisini number holatda qaytarsin.
+// MASALAN: calculate("1+3") return 4;
+
+const calculate = (str: any) => {
+  let newArr = str.split("").map(Number);
+  let newNumArr = [];
+
+  for (let i = 0; i < newArr.length; i++) {
+    if (!isNaN(newArr[i])) {
+      newNumArr.push(newArr[i]);
+    }
+  }
+
+  return newNumArr.reduce((a: any, b: any) => a + b);
+};
+
+console.log(calculate("1+2+3"));
+
 // Q-TASK:
 
 // Shunday function yozing, u 2 ta parametrgga ega bolib
@@ -38,20 +60,20 @@ DataBase Validation
 // MASALAN: hasProperty({name: "BMW", model: "M3"}, "model")
 // return true; hasProperty({name: "BMW", model: "M3"}, "year") return false
 
-const hasProperty = (obj: any, str: any) => {
-  let newArr = [];
-  let newArr1 = [];
-  for (const key of Object.keys(obj)) {
-    if (key === str) {
-      newArr.push(key);
-    } else {
-      newArr1.push(key);
-    }
-  }
-  return newArr.length === 0 ? false : true;
-};
+// const hasProperty = (obj: any, str: any) => {
+//   let newArr = [];
+//   let newArr1 = [];
+//   for (const key of Object.keys(obj)) {
+//     if (key === str) {
+//       newArr.push(key);
+//     } else {
+//       newArr1.push(key);
+//     }
+//   }
+//   return newArr.length === 0 ? false : true;
+// };
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
 
 // P-TASK:
 
